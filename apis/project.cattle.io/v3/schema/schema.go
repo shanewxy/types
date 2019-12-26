@@ -123,8 +123,9 @@ func workloadTypes(schemas *types.Schemas) *types.Schemas {
 				"rollback": {
 					Input: "rollbackRevision",
 				},
-				"pause":  {},
-				"resume": {},
+				"pause":    {},
+				"resume":   {},
+				"redeploy": {},
 			}
 			schema.MustCustomizeField("name", func(field types.Field) types.Field {
 				field.Type = "dnsLabelRestricted"
@@ -469,8 +470,9 @@ func deploymentTypes(schemas *types.Schemas) *types.Schemas {
 				"rollback": {
 					Input: "deploymentRollbackInput",
 				},
-				"pause":  {},
-				"resume": {},
+				"pause":    {},
+				"resume":   {},
+				"redeploy": {},
 			}
 			schema.MustCustomizeField("name", func(field types.Field) types.Field {
 				field.Type = "dnsLabelRestricted"
