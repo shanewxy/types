@@ -123,9 +123,9 @@ func workloadTypes(schemas *types.Schemas) *types.Schemas {
 				"rollback": {
 					Input: "rollbackRevision",
 				},
-				"pause":    {},
-				"resume":   {},
-				"redeploy": {},
+				"pause":  {},
+				"resume": {},
+				//"redeploy": {},
 			}
 			schema.MustCustomizeField("name", func(field types.Field) types.Field {
 				field.Type = "dnsLabelRestricted"
